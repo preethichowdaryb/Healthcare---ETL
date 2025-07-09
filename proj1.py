@@ -47,3 +47,10 @@ print(df)
 #dropping the room number 
 df.drop(columns='Room Number', inplace=True)
 print(df)
+#rounding the billing amount to 2 decimal places 
+print(df['Billing Amount'])
+df['Billing Amount'] = df['Billing Amount'].round(2)
+print(df['Billing Amount'])
+print(df.columns)
+#saving the file in CSV format
+df1= df.to_csv("optimized_healthcare_dataset.csv", index=False)
